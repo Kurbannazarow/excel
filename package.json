@@ -1,0 +1,23 @@
+{
+  "name": "excel",
+  "version": "1.0.0",
+  "description": "this is my pure excel in javascript",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kurbannazarow/excel.git"
+  },
+  "keywords": [
+    "js",
+    "excel"
+  ],
+  "author": "Eziz Kurbannazarov <eziz_kurbannazarow@mail.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kurbannazarow/excel/issues"
+  },
+  "homepage": "https://github.com/Kurbannazarow/excel#readme"
+}
