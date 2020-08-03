@@ -15,7 +15,8 @@ const jsLoader = () => {
   const loaders = [{
     loader: "babel-loader",
     options: {
-      presets: ['@babel/preset-env']
+      presets: ['@babel/preset-env'],
+      plugins: ['@babel/plugin-proposal-class-properties']
     }
   }]
   if (isDev) {
@@ -37,7 +38,7 @@ module.exports = {
     extensions: [".js"],
     alias: {
       "@": path.resolve(__dirname, "src"),
-      "@core": "@/core",
+      "@core": path.resolve(__dirname, "src/core"),
     },
   },
   devtool: isDev ? 'source-map' : false,
@@ -62,7 +63,7 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: filename('css'),
-    }),
+    })
   ],
   module: {
     rules: [{
