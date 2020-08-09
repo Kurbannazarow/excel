@@ -8,6 +8,7 @@
     right: 0;
     overflow-x: auto;
     padding-bottom: 2px;
+
     .row {
         display: flex;
         flex-direction: row;
@@ -24,6 +25,7 @@
         border: 1px solid $border-color;
         height: 100%;
         border-top: none;
+        position: relative;
     }
 
     .row-data {
@@ -41,6 +43,7 @@
         height: 100%;
         border-top: none;
         border-left: none;
+        position: relative;
     }
 
     .cell {
@@ -54,11 +57,45 @@
         border-top: none;
         border-left: none;
         outline: none;
+
         &.selected {
             border: none;
-            outline: 2px solid #3c74ff;
+            outline: 2px solid $primary-color;
             z-index: 2;
         }
     }
 
+}
+
+.col-resize,
+.row-resize {
+    position: absolute;
+    background: $primary-color;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: 1000;
+
+    &:hover {
+        opacity: 1 !important;
+    }
+}
+
+.col-resize {
+    width: 3px;
+    top: 0;
+
+    &:hover {
+        cursor: col-resize;
+    }
+}
+
+
+.row-resize {
+    height: 3px;
+    left: 0;
+
+    &:hover {
+        cursor: row-resize;
+    }
 }
